@@ -1,5 +1,5 @@
 AmaDeCasa Microservices Deployment
-📘 Descripción general
+Descripción general
 
 El proyecto AmaDeCasa utiliza una arquitectura basada en microservicios Docker, organizados en dos entornos:
 
@@ -9,7 +9,7 @@ Producción (prod): entorno estable para servicios en ejecución.
 
 Cada microservicio es desplegado mediante Docker Compose, con redes compartidas y variables de entorno específicas.
 
-🏗️ Estructura de carpetas
+Estructura de carpetas
 /srv/apps/amadecasa/
 ├── dev/
 │   └── mc-notifier-telegram/
@@ -24,7 +24,7 @@ Cada microservicio es desplegado mediante Docker Compose, con redes compartidas 
         ├── .env.prod
         └── app/...
 
-⚙️ Configuración de redes
+ Configuración de redes
 
 La red compartida amade-net conecta los distintos microservicios del sistema.
 
@@ -32,7 +32,7 @@ Para crearla manualmente (solo una vez):
 
 sudo docker network create amadecasa_amade-net
 
-🧩 Entorno de desarrollo
+ Entorno de desarrollo
 
 Ruta: /srv/apps/amadecasa/dev/mc-notifier-telegram/
 
@@ -66,7 +66,7 @@ Acceso local:
 
 http://localhost:8010/docs
 
-🚀 Entorno de producción
+ Entorno de producción
 
 Ruta: /srv/apps/amadecasa/prod/mc-notifier-telegram/
 
@@ -100,14 +100,15 @@ Acceso local:
 
 http://localhost:9010/docs
 
-🧠 Comandos útiles
+ Comandos útiles
 Descripción	Comando
 Listar contenedores activos	sudo docker ps
 Ver logs del servicio	sudo docker logs -f <nombre>
 Detener entorno dev	sudo docker compose down
 Actualizar imagen prod	sudo docker compose pull && sudo docker compose up -d
 Ver redes Docker	sudo docker network ls
-🌐 Subdominios locales (opcional)
+
+ Subdominios locales (opcional)
 
 Editar /etc/hosts:
 
